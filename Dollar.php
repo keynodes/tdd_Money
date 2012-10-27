@@ -2,9 +2,29 @@
 
 class Dollar
 {
-    public $amount = 10;
+    public $amount;
 
-    public function times()
+    /**
+     * __construct
+     *
+     * @param mixed $amount
+     * @access public
+     * @return void
+     */
+    public function __construct($amount)
     {
+        $this->amount = $amount;
+    }
+
+    /**
+     * times
+     *
+     * @param int $multiplier
+     * @access public
+     * @return void
+     */
+    public function times($multiplier)
+    {
+        $this->amount *= $multiplier;
     }
 }
